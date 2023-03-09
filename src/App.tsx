@@ -135,15 +135,15 @@ function App() {
               {loading &&
                 [0, 1, 2, 3, 4, 5, 6, 7].map((val) => {
                   return (
-                    <Grid item xs={12} md={6} lg={3}>
+                    <Grid key={val} item xs={12} md={6} lg={3}>
                       <NFTDisplaySkeleton />
                     </Grid>
                   );
                 })}
               {!loading &&
-                filteredNfts.map((nft) => {
+                filteredNfts.map((nft: OwnedNft) => {
                   return (
-                    <Grid item xs={12} md={6} lg={3}>
+                    <Grid key={nft.tokenId} item xs={12} md={6} lg={3}>
                       <NFTDisplay nft={nft} />
                     </Grid>
                   );
