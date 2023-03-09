@@ -118,7 +118,7 @@ function App() {
                   label={
                     !isFilteringSpam
                       ? "Remove Potential Spam"
-                      : "Removing spam!"
+                      : "Spam Removed!"
                   }
                 />
                 <IconButton
